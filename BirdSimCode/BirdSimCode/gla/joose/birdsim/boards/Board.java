@@ -83,50 +83,11 @@ public abstract class Board extends Observable implements Observer {
         });
     }
     
-    /**
-     * Configures a board with specific set of behaviour;
-     * must be implemented by a subclass.
-     * 
-     * @param frame The JFrame on which the board will be created.
-     */
-    public abstract void initBoard(JFrame frame);
     
     
-    /**
-     * Notifies the board frame on changes in the number of birds/grains;
-     * must be implemented by a subclass.
-     * 
-     */
-    public abstract void updateStockDisplay();
 
     
-    /**
-     * Generic bird behaviour for any concrete board. 
-     * This class is overridden when a different board behaviour is preferred
-     * 
-     */
-	public void fly(){
-		
-		Bird bird = new Bird();
-		
-		int randRow = rand.nextInt((getRows() - 3) + 1) + 0;
-    	int randCol = rand.nextInt((getColumns() - 3) + 1) + 0;
-    	
-		place(bird,randRow, randCol);
-		bird.setDraggable(false);
-		bird.setSpeed(20);
-		updateStockDisplay();
-		
-		while(!scareBirds){
-			randRow = rand.nextInt((getRows() - 3) + 1) + 0;
-        	randCol = rand.nextInt((getColumns() - 3) + 1) + 0; 
-        	bird.moveTo(randRow, randCol);
-    		bird.setSpeed(20);
-			
-		} 
-		bird.remove();
-		updateStockDisplay();
-	}
+    
 	
 	/**
      * updates the number of birds and grains on the board.

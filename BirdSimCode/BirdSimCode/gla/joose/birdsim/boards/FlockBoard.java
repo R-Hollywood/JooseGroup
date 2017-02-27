@@ -27,7 +27,6 @@ public class FlockBoard extends Board{
 		super(rows, columns);		
 	}
 
-	@Override
 	public void initBoard(final JFrame frame) {
         JPanel display = getJPanel();
         frame.getContentPane().add(display, BorderLayout.CENTER);
@@ -84,7 +83,6 @@ public class FlockBoard extends Board{
         		
 	}
 
-	@Override
 	public void updateStockDisplay(){
 		updateStock();
 		noOfBirdsLabel.setText("#birds: "+noofbirds);
