@@ -15,5 +15,10 @@ public interface BoardInterface {
      * 
      */
     public abstract void updateStockDisplay();
+    
+    /**
+     * moved from Board Class
+     */
+    public abstract void fly();
 
 }

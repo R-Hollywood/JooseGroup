@@ -88,6 +88,29 @@ public class FlockBoard extends Board{
 		noOfBirdsLabel.setText("#birds: "+noofbirds);
 	}
 	
+	public void fly(){
+		
+		Bird bird = new Bird();
+		
+		int randRow = rand.nextInt((getRows() - 3) + 1) + 0;
+    	int randCol = rand.nextInt((getColumns() - 3) + 1) + 0;
+    	
+		place(bird,randRow, randCol);
+		bird.setDraggable(false);
+		bird.setSpeed(20);
+		updateStockDisplay();
+		
+		while(!scareBirds){
+			randRow = rand.nextInt((getRows() - 3) + 1) + 0;
+        	randCol = rand.nextInt((getColumns() - 3) + 1) + 0; 
+        	bird.moveTo(randRow, randCol);
+    		bird.setSpeed(20);
+			
+		} 
+		bird.remove();
+		updateStockDisplay();
+	}
+	
 	
 	
 
