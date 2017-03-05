@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 /**
  * A BirdSim board with generic bird flying behaviour.
  */
-public class FlockBoard extends Board{
+public class FlockBoard extends Board implements BoardInterface{
 
     JPanel buttonPanel;
     JButton hatchEggButton;

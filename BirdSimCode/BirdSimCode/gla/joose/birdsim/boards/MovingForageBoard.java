@@ -20,7 +20,7 @@ import gla.joose.birdsim.util.DistanceMgr;
 /**
  * A BirdSim board with where birds simultaneously fly and perch on  moving grains.
  */
-public class MovingForageBoard extends Board{
+public class MovingForageBoard extends Board implements BoardInterface{
 
     JPanel buttonPanel;
     JButton hatchEggButton;
